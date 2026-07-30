@@ -14,6 +14,112 @@ Phân loại intent (toàn bộ / trong cụm lặp thật):
 
 === 20 cụm lặp lớn nhất ===
 
+=== 30 cụm bổ sung thêm ===
+
+[Cụm 21] 4 message · 4 user · intent=khai_niem · source=typed
+   M2501 U0018 | giải thích ý nghĩa của prompt engineering
+   M2502 U0036 | prompt engineering là gì và khác gì với fine-tuning
+   M2503 U0185 | cho ví dụ về prompt engineering đơn giản
+   M2504 U0288 | tại sao prompt engineering quan trọng trong sản phẩm AI
+
+[Cụm 22] 4 message · 3 user · intent=khai_niem · source=typed
+   M2505 U0027 | làm sao để viết câu hỏi tốt cho chatbot học sinh
+   M2506 U0147 | viết câu hỏi ngắn gọn hơn cho chatbot
+   M2507 U0224 | giúp em chỉnh câu hỏi để chatbot hiểu đúng hơn
+   M2508 U0290 | câu hỏi nên có cấu trúc như thế nào
+
+[Cụm 23] 4 message · 3 user · intent=khai_niem · source=typed
+   M2509 U0082 | ai là người đầu tiên dùng transformer trong NLP
+   M2510 U0108 | transformer hoạt động như thế nào
+   M2511 U0193 | giải thích transformer bằng ví dụ thực tế
+   M2512 U0325 | why transformer better than RNN
+
+[Cụm 24] 3 message · 3 user · intent=khai_niem · source=typed
+   M2513 U0060 | RAG là gì và khác gì với fine-tuning
+   M2514 U0167 | giải thích RAG cho người mới bắt đầu
+   M2515 U0301 | ví dụ về hệ thống RAG trong doanh nghiệp
+
+[Cụm 25] 3 message · 3 user · intent=khai_niem · source=typed
+   M2516 U0040 | làm sao để chọn model cho bài tập thực hành
+   M2517 U0119 | nên dùng GPT hay Claude cho demo này
+   M2518 U0235 | model nào phù hợp nhất cho ứng dụng chatbot
+
+[Cụm 26] 3 message · 2 user · intent=logistics · source=typed
+   M2519 U0012 | em cần mở camera khi tham gia lớp học online
+   M2520 U0122 | cách tham gia buổi học bằng laptop như thế nào
+   M2521 U0271 | khi nào cần bật micro và camera
+
+[Cụm 27] 3 message · 2 user · intent=khai_niem · source=typed
+   M2522 U0073 | giải thích embeddings ngắn gọn
+   M2523 U0198 | embeddings khác vector database như thế nào
+   M2524 U0292 | làm sao embeddings giúp tìm kiếm tốt hơn
+
+[Cụm 28] 3 message · 2 user · intent=khai_niem · source=typed
+   M2525 U0054 | user journey trong sản phẩm AI là gì
+   M2526 U0150 | giải thích user journey bằng ví dụ
+   M2527 U0241 | tại sao user journey quan trọng trong thiết kế sản phẩm
+
+[Cụm 29] 3 message · 2 user · intent=khai_niem · source=typed
+   M2528 U0032 | agent có thể tự gọi tool không
+   M2529 U0189 | làm sao agent biết khi nào gọi tool
+   M2530 U0317 | ví dụ về tool calling trong agent
+
+[Cụm 30] 3 message · 2 user · intent=khai_niem · source=typed
+   M2531 U0021 | giải thích vector database bằng ví dụ đơn giản
+   M2532 U0136 | vector db có khác gì với sql database
+   M2533 U0307 | ưu nhược điểm của vector database
+
+[Cụm 31] 3 message · 2 user · intent=khai_niem · source=typed
+   M2534 U0064 | làm sao để đánh giá chất lượng chatbot
+   M2535 U0220 | metric nào dùng để đo độ chính xác của chatbot
+   M2536 U0331 | cách đo hiệu quả hệ thống AI trong thực tế
+
+[Cụm 32] 3 message · 2 user · intent=khai_niem · source=typed
+   M2537 U0047 | memory trong agent là gì
+   M2538 U0091 | agent có lưu trạng thái không
+   M2539 U0263 | ví dụ về short-term và long-term memory
+
+[Cụm 33] 3 message · 2 user · intent=khai_niem · source=typed
+   M2540 U0078 | chain of thought là gì
+   M2541 U0145 | khác nhau giữa CoT và ReAct thế nào
+   M2542 U0281 | tại sao CoT giúp model giải quyết vấn đề tốt hơn
+
+[Cụm 34] 3 message · 2 user · intent=khai_niem · source=typed
+   M2543 U0017 | explain hallucination in AI simply
+   M2544 U0156 | hallucination là gì và cách hạn chế
+   M2545 U0298 | vì sao model lại tạo thông tin sai
+
+[Cụm 35] 3 message · 2 user · intent=khai_niem · source=typed
+   M2546 U0053 | làm sao để dùng LLM cho hỗ trợ khách hàng
+   M2547 U0162 | ví dụ chatbot hỗ trợ khách hàng trong e-commerce
+   M2548 U0312 | workflow của hệ thống support AI
+
+[Cụm 36] 3 message · 2 user · intent=khai_niem · source=typed
+   M2549 U0034 | prompt template là gì
+   M2550 U0138 | khác nhau giữa prompt template và prompt thông thường
+   M2551 U0277 | cách thiết kế prompt template tốt
+
+[Cụm 37] 3 message · 2 user · intent=khai_niem · source=typed
+   M2552 U0028 | giải thích về retrieval quality
+   M2553 U0114 | làm sao tăng độ chính xác của retrieval
+   M2554 U0237 | metrics dùng để đánh giá retrieval
+
+[Cụm 38] 3 message · 2 user · intent=khai_niem · source=typed
+   M2555 U0087 | nói về evaluators trong hệ thống AI
+   M2556 U0173 | evaluator là gì trong phát triển AI
+   M2557 U0304 | ví dụ về evaluator trong sản phẩm chatbot
+
+[Cụm 39] 3 message · 2 user · intent=khai_niem · source=typed
+   M2558 U0008 | làm sao xây dựng dashboard cho hệ thống AI
+   M2559 U0149 | metrics nào nên hiển thị trên dashboard
+   M2560 U0279 | ví dụ dashboard cho monitoring AI
+
+[Cụm 40] 3 message · 2 user · intent=khai_niem · source=typed
+   M2561 U0051 | làm sao để tự động hóa quy trình học tập bằng AI
+   M2562 U0157 | ví dụ workflow học tập được hỗ trợ bởi AI
+   M2563 U0318 | AI có thể giúp sinh viên học hiệu quả hơn không
+
+
 [Cụm 1] 94 message · 73 user · intent=khai_niem · source=typed
    M1149 U0067 | tóm tắt nội dung chính trong slide này
    M2413 U0242 | tóm tắt
