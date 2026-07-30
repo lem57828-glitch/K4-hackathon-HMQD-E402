@@ -1,0 +1,119 @@
+Tổng câu hỏi học viên (role=student)      : 1261
+Nguồn câu hỏi                             : typed=926 · template_click=335 · selection_only=0
+Câu hỏi đủ dài để so trùng (>= 2 token) : 803
+Cụm gần trùng (>=2 message)               : 52
+Cụm lặp THẬT (>=2 user khác nhau)         : 37
+Message nằm trong cụm lặp thật            : 190  (15.1% tổng câu hỏi)
+  ├ trong đó cụm 100% tự gõ               : 26 cụm · 158 message (17.1% câu tự gõ)
+  └ cụm có message từ template/bôi đen    : 11 cụm
+
+Phân loại intent (toàn bộ / trong cụm lặp thật):
+  khai_niem           1140 /   176   (15.4% câu loại này bị hỏi lặp)
+  logistics             62 /    12   (19.4% câu loại này bị hỏi lặp)
+  chao_hoi_lac_de       59 /     2   (3.4% câu loại này bị hỏi lặp)
+
+=== 20 cụm lặp lớn nhất ===
+
+[Cụm 1] 94 message · 73 user · intent=khai_niem · source=typed
+   M1149 U0067 | tóm tắt nội dung chính trong slide này
+   M2413 U0242 | tóm tắt
+   M0332 U0221 | tóm tắt toàn bộ slide sau đó đưa ra các ý chính
+   M1067 U0144 | Tóm tắt qua các nội dung chính có trong slide
+   M0325 U0135 | tóm tắt tất cả slide
+   M0903 U0128 | Tóm tắt sờ lai này
+
+[Cụm 2] 9 message · 8 user · intent=khai_niem · source=typed
+   M2041 U0105 | trả lời câu hỏi này
+   M1006 U0329 | Trả lời giúp tôi câu hỏi này
+   M2102 U0314 | hãy trả lời câu hỏi đó đi
+   M0457 U0213 | bạn có nhớ câu hỏi mà tôi trả lời không
+   M1946 U0111 | Viết câu trả lời
+   M0522 U0111 | viết câu trả lời
+
+[Cụm 3] 7 message · 6 user · intent=khai_niem · source=template_click+typed
+   M0441 U0280 | Giải thích đoạn bôi đen ở Trang 17: "Bạn cần viết prompt cho chatbot hỗ trợ sinh viên VinUni đăng ký môn học. 
+   M0842 U0179 | ạn cần viết prompt cho chatbot hỗ trợ sinh viên VinUni đăng ký môn học. Xác định 4 thành phần: ■ Role: Chatbot
+   M0079 U0297 | Bạn cần viết prompt cho chatbot hỗ trợ sinh viên VinUni đăng ký môn học. Xác định 4 thành phần: ■ Role: Chatbo
+   M0782 U0002 | Bạn cần viết prompt cho chatbot hỗ trợ sinh viên VinUni đăng ký môn học. Xác định 4 thành phần: ■ Role: Chatbo
+   M2230 U0078 | Tình huống Bạn cần viết prompt cho chatbot hỗ trợ sinh viên VinUni đăng ký môn học. Xác định 4 thành phần: ■ R
+   M0964 U0009 | Giải thích đoạn bôi đen ở Trang 15: "Bạn cần viết prompt cho chatbot hỗ trợ sinh viên VinUni đăng ký môn học. 
+
+[Cụm 4] 4 message · 4 user · intent=khai_niem · source=template_click
+   M0536 U0300 | Giải thích đoạn bôi đen ở Trang 2: "ChatGPT là chatbot hay agent? Siri thì sao? Cursor IDE thì sao"
+   M2013 U0308 | Giải thích đoạn bôi đen ở Trang 2: "ChatGPT là chatbot hay agent? Siri thì sao? Cursor IDE thì sao?”"
+   M2365 U0124 | Giải thích đoạn bôi đen ở Trang 2: "“ChatGPT là chatbot hay agent? Siri thì sao? Cursor IDE thì sao?”"
+   M0942 U0234 | Giải thích đoạn bôi đen ở Trang 2: "“ChatGPT là chatbot hay agent? Siri thì sao? Cursor IDE thì sao?"
+
+[Cụm 5] 4 message · 3 user · intent=khai_niem · source=typed
+   M1785 U0227 | 6 giai đoạn phát triển của AI
+   M1490 U0227 | 6 giai đoạn phát triển của AI Product
+   M1294 U0212 | ") Giải thích đoạn bôi đen ở Trang 6: "Phát triển Sản phẩm AI (AI Product)" giải thích hình biểu diễn
+   M0848 U0217 | ") Giải thích đoạn bôi đen ở Trang 4: "Phát triển Sản phẩm AI (AI Product)"
+
+[Cụm 6] 3 message · 3 user · intent=khai_niem · source=typed
+   M1280 U0294 | tool calling là gì
+   M0740 U0183 | Giải thích cho tôi về tool calling
+   M2338 U0015 | chi tiết tool calling
+
+[Cụm 7] 3 message · 3 user · intent=khai_niem · source=template_click+typed
+   M0272 U0212 | tóm gọn lại về kiến trúc Agent
+   M1180 U0096 | Kiến trúc của bạn là gì?
+   M2422 U0300 | Giải thích đoạn bôi đen ở Trang 3: "Kiến Trúc Agent"
+
+[Cụm 8] 3 message · 2 user · intent=khai_niem · source=typed
+   M0936 U0003 | viết prompt
+   M1945 U0194 | viết prompt cho mình
+   M2187 U0194 | Viêt prompt chi tiết hơn
+
+[Cụm 9] 3 message · 2 user · intent=khai_niem · source=typed
+   M2484 U0072 | harness engineering là gì
+   M2374 U0306 | Harness engineering là gì
+   M0353 U0306 | giải thích harness engineering
+
+[Cụm 10] 3 message · 3 user · intent=khai_niem · source=template_click+typed
+   M2319 U0215 | Lớp học 1000 học viên (khóa K3 & K4, số lượng Trợ giảng có hạn. Dùng AI giải quyết thế nào
+   M1259 U0228 | Giải thích đoạn bôi đen ở Trang 11: "Lớp học 1000 học viên (khóa K3 & K4, số lượng Trợ giảng có hạn. Dùng AI 
+   M1698 U0347 | Giải thích đoạn bôi đen ở Trang 11: "Lớp học 1000 học viên (khóa K3 & K4, số lượng Trợ giảngcó hạn.Dùng AI gi
+
+[Cụm 11] 3 message · 3 user · intent=khai_niem · source=template_click+typed
+   M0318 U0342 | Khi nào nên dùng cái nào: rule-based bot, LLM chatbot, và agent
+   M2205 U0165 | trang 8 những rủi ro của rule-based bot , llm chatbot và agent. giai thích rõ 3 thằng này.
+   M1803 U0234 | Giải thích đoạn bôi đen ở Trang 4: "Phân biệt được rule-based bot, LLM chatbot, và agent"
+
+[Cụm 12] 3 message · 2 user · intent=khai_niem · source=typed
+   M0244 U0031 | ví dụ đi
+   M1761 U0031 | ví dụ cụ thể đi
+   M0896 U0259 | cho ví dụ cụ thể đi
+
+[Cụm 13] 3 message · 3 user · intent=logistics · source=typed
+   M0518 U0104 | • 2025 Thongtincuuho.org Co-founder) • 2025 FPT Software AI Center PM · AI Agent) • 2021  2025 Xantus PM ·
+   M1465 U0139 | • 2025 Thongtincuuho.org Co-founder) • 2025 FPT Software AI Center PM · AI Agent) • 2021  2025 Xantus PM ·
+   M0852 U0330 | • 2025 Thongtincuuho.org Co-founder) • 2025 FPT Software AI Center PM · AI Agent) • 2021  2025 Xantus PM ·
+
+[Cụm 14] 2 message · 2 user · intent=logistics · source=typed
+   M1293 U0326 | phóng to slide thế nào để full màn
+   M0655 U0309 | Lam sao de phong to duoc slide
+
+[Cụm 15] 2 message · 2 user · intent=khai_niem · source=typed
+   M0060 U0355 | giải thích nghĩa chi tiết của trang 4
+   M2016 U0268 | RLHF nghĩa là gì, giải thích chi tiết
+
+[Cụm 16] 2 message · 2 user · intent=khai_niem · source=template_click
+   M1058 U0180 | Giải thích đoạn bôi đen ở Trang 1: "VLearn Lecture Material"
+   M0991 U0302 | Giải thích đoạn bôi đen ở Trang 1: "VLearn Lecture Material"
+
+[Cụm 17] 2 message · 2 user · intent=khai_niem · source=template_click
+   M2090 U0300 | Giải thích đoạn bôi đen ở Trang 40: "LLM có thực sự “hiểuˮ — hay chỉ là vẹt thống kê?"
+   M1348 U0070 | Giải thích đoạn bôi đen ở Trang 40: "LM có thực sự “hiểuˮ — hay chỉ là vẹt thống kê?"
+
+[Cụm 18] 2 message · 2 user · intent=chao_hoi_lac_de · source=template_click
+   M1617 U0329 | Giải thích đoạn bôi đen ở Trang 81: "Key takeaways — 5 ý để mang về 1. LLM = cỗ máy Transformer đoán token tiế
+   M0595 U0191 | Giải thích đoạn bôi đen ở Trang 81: "Key takeaways — 5 ý để mang về 1. LLM = cỗ máy Transformer đoán token tiế
+
+[Cụm 19] 2 message · 2 user · intent=khai_niem · source=template_click+typed
+   M0049 U0198 | Giải thích đoạn bôi đen ở Trang 17: "Zero-shot, One-shot, Few-shot, CoT"
+   M2459 U0153 | zero shot, one shot, few shot, CoT nghĩa là gì
+
+[Cụm 20] 2 message · 2 user · intent=khai_niem · source=template_click+typed
+   M1278 U0254 | Giải thích đoạn bôi đen ở Trang 3: "Day03-D302-tu-chatbot-den-agentic-agent-react.pdf"
+   M1216 U0168 | tóm tắt slide Day03-D302-tu-chatbot-den-agentic-agent-react.pdf này
