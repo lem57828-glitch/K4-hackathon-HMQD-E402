@@ -2,7 +2,7 @@
 
 > **Giả định lịch:** N1 = 30/07/2026, N2 = 31/07/2026 (khoá 4). Nếu lệch, mọi mốc dưới đây vẫn giữ nguyên thứ tự — chỉ dịch giờ.
 >
-> **Trạng thái xuất phát:** prototype Mock đã chạy (web UI + AI thật + trace). Còn thiếu `spec.md`, `eval/`, `validation/`, README nhóm, `reflection/`, slide.
+> **Trạng thái xuất phát:** prototype Mock đã chạy (web UI + AI thật + trace). Còn thiếu/đang hoàn thiện `spec.md`, artifact eval do người phụ trách riêng cung cấp, `validation/`, README nhóm, `reflection/`, slide.
 
 ---
 
@@ -12,10 +12,10 @@ Chia theo **khối điểm rubric**, không chia theo "ai gõ nhiều chữ". L�
 
 | Người | Khối phụ trách | Điểm gánh |
 |---|---|---|
-| **[Tên 1]** · Evidence | R1 · `spec.md` §1-§2-§3 | **15** |
-| **[Tên 2]** · Thiết kế | R2 + R3 · `spec.md` §4-§5-§6 | **26** |
-| **[Tên 3]** · Kiểm thử | R4 · `spec.md` §7 + `eval/` | **15** |
-| **[Tên 4]** · Prototype & Demo | R5 + R6 + R7 · `validation/` + README + slide | **19** |
+| **Hồ Quang Minh - 2A202601906** · Evidence | R1 · `spec.md` §1-§2-§3 | **15** |
+| **Nguyễn Minh Quang - 2A202601730** · Thiết kế | R2 + R3 · `spec.md` §4-§5-§6 | **26** |
+| **Lệnh Quang Hưng - 2A202601546** · Repo glue + nhận artifact kiểm thử | R4 · `spec.md` §7 + kết quả eval từ người phụ trách riêng | **15** |
+| **Lê Minh Đạt - 2A202601088** · Prototype & Demo | R5 + R6 + R7 · `validation/` + README + slide | **19** |
 
 Cộng đúng 75. Reflection cá nhân mỗi người tự viết, chấm riêng.
 
@@ -54,12 +54,12 @@ gantt
 
 **Hai nút thắt phải canh:**
 
-1. **Quality bar chốt lúc 23:59 N1 và không đổi được nữa.** [Tên 3] phải chạy thử một lượt trước khi đặt bar — đặt bừa thì hoặc quá dễ (giám khảo thấy ngay) hoặc quá khó (fail cả bộ).
+1. **Quality bar chốt lúc 23:59 N1 và không đổi được nữa.** Người phụ trách eval phải chạy thử một lượt trước khi đặt bar; Lệnh Quang Hưng - 2A202601546 nhận kết quả để ghép vào tài liệu.
 2. **Validation cần 5 người ngoài nhóm.** Phải hẹn trước từ tối N1, đừng đợi tới 12:00 N2 mới đi tìm người.
 
 ---
 
-## [Tên 1] · Evidence & Impact — 15 điểm
+## Hồ Quang Minh - 2A202601906 · Evidence & Impact — 15 điểm
 
 **Sản phẩm:** `spec.md` §1 · §2 · §3
 
@@ -80,7 +80,7 @@ Mining log đã xong rồi ([evidence/mining/](evidence/mining/)) — việc c�
 
 ---
 
-## [Tên 2] · Lát cắt & Chỗ khó — 26 điểm
+## Nguyễn Minh Quang - 2A202601730 · Lát cắt & Chỗ khó — 26 điểm
 
 **Sản phẩm:** `spec.md` §4 · §4b · §5 · §6 — **khối điểm to nhất**
 
@@ -110,16 +110,16 @@ Bảng ánh xạ 4 lớp chỗ khó đã có sẵn ở [PROJECT-OVERVIEW.md §8]
 
 ---
 
-## [Tên 3] · Kiểm thử — 15 điểm
+## Lệnh Quang Hưng - 2A202601546 · Repo glue + nhận artifact kiểm thử — 15 điểm
 
-**Sản phẩm:** `eval/golden-set.md` + `eval/runs/` + `spec.md` §7
+**Sản phẩm:** `spec.md` §7 + artifact eval do người phụ trách riêng gửi lại.
 
 | Việc | Rubric |
 |---|---|
-| **Golden set ≥20 case** nhóm tự xây | R4 · 4đ |
+| Nhận golden set ≥20 case từ người phụ trách eval và kiểm tra có được trỏ trong spec | R4 · 4đ |
 | Mỗi chiều chất lượng có **định nghĩa kiểm chứng được** (người ngoài chấm ra cùng kết quả) | R4 · 4đ |
 | **Quality bar bằng số**, nằm trong spec trước 23:59 N1, giữ nguyên sau đó | R4 · 3đ |
-| Bảng kết quả chạy trọn bộ ≥1 lượt, **đủ mọi case kể cả case fail**, có %, đối chiếu bar | R4 · 4đ |
+| Nhận bảng kết quả chạy trọn bộ ≥1 lượt, **đủ mọi case kể cả case fail**, có %, đối chiếu bar | R4 · 4đ |
 
 ### Cơ cấu golden set
 
@@ -139,7 +139,7 @@ Bảng ánh xạ 4 lớp chỗ khó đã có sẵn ở [PROJECT-OVERVIEW.md §8]
 python codebase/assistant.py --title "..." --body "..." --trace
 ```
 
-Nên viết `eval/run_eval.py` đọc golden set → chạy từng case → xuất bảng markdown. Rẻ hơn chạy tay 20 lần, và chạy lại được khi sửa prompt.
+Người phụ trách eval có thể dùng runner riêng hoặc chạy tay có log, nhưng kết quả gửi lại phải đủ output, trace/warnings nếu có, pass/fail, và bảng summary để ghép vào spec.
 
 ### Về quality bar
 
@@ -149,7 +149,7 @@ Nên viết `eval/run_eval.py` đọc golden set → chạy từng case → xu�
 
 ---
 
-## [Tên 4] · Prototype, Validation & Demo — 19 điểm
+## Lê Minh Đạt - 2A202601088 · Prototype, Validation & Demo — 19 điểm
 
 **Sản phẩm:** `validation/` + `README.md` + `demo-slides.pdf` + giữ nhịp repo
 
@@ -190,13 +190,13 @@ Ba câu hỏi cố định cho mọi người test (ghi vào spec §8):
 
 ```
 spec-parts/
-├── 01-evidence.md      ← [Tên 1]  §1 §2 §3
-├── 04-thiet-ke.md      ← [Tên 2]  §4 §4b §5 §6
-├── 07-kiem-thu.md      ← [Tên 3]  §7
-└── 08-phan-cong.md     ← [Tên 4]  §8 §9
+├── 01-evidence.md      ← Hồ Quang Minh - 2A202601906  §1 §2 §3
+├── 04-thiet-ke.md      ← Nguyễn Minh Quang - 2A202601730  §4 §4b §5 §6
+├── 07-kiem-thu.md      ← Lệnh Quang Hưng - 2A202601546  §7
+└── 08-phan-cong.md     ← Lê Minh Đạt - 2A202601088  §8 §9
 ```
 
-Mỗi người chỉ commit file của mình. **[Tên 4] gom lại thành `spec.md`** lúc ~22:00 N1, rồi từ đó trở đi chỉ [Tên 4] sửa `spec.md`.
+Mỗi người chỉ commit file của mình. **Lê Minh Đạt - 2A202601088 gom lại thành `spec.md`** lúc ~22:00 N1, rồi từ đó trở đi chỉ Lê Minh Đạt - 2A202601088 sửa `spec.md`.
 
 ```bash
 git pull --rebase   # TRƯỚC mỗi lần push
@@ -215,10 +215,10 @@ TA sẽ chỉ **ngẫu nhiên** một người. Mỗi người học thuộc ph�
 
 | Người | Phải giải thích được |
 |---|---|
-| [Tên 1] | Ngưỡng Jaccard 0.60 chọn thế nào · vì sao chatlog VLearn là proxy có giới hạn cho Discord |
-| [Tên 2] | Vì sao tách 2 tool · vì sao cấm tin `status_label` · 4 nguyên tắc HAX trỏ vào dòng code nào |
-| [Tên 3] | Golden set phủ 4 lớp ra sao · quality bar đặt bằng cách nào · case nào fail và vì sao |
-| [Tên 4] | Vòng lặp agent chạy sao · `normalize_output` chặn gì · phần nào là mock, phần nào thật |
+| Hồ Quang Minh - 2A202601906 | Ngưỡng Jaccard 0.60 chọn thế nào · vì sao chatlog VLearn là proxy có giới hạn cho Discord |
+| Nguyễn Minh Quang - 2A202601730 | Vì sao tách 2 tool · vì sao cấm tin `status_label` · 4 nguyên tắc HAX trỏ vào dòng code nào |
+| Lệnh Quang Hưng - 2A202601546 | Artifact eval nằm ở đâu · quality bar đặt bằng cách nào · case nào fail và vì sao |
+| Lê Minh Đạt - 2A202601088 | Vòng lặp agent chạy sao · `normalize_output` chặn gì · phần nào là mock, phần nào thật |
 
 ---
 
@@ -230,6 +230,6 @@ Còn ~1 ngày, mọi giờ tiêu sai đều lấy từ khối điểm khác.
 |---|---|
 | Tích hợp Discord thật | Rubric **không cho thêm điểm nào** — R5 chấm "khai đúng mức prototype", Mock khai Mock đã đủ 8/8. Đề bài ghi rõ *"không yêu cầu deploy"* |
 | Thêm tính năng mới | Vi phạm chính non-goals mình khai ở §4 |
-| Sửa prompt sau khi [Tên 3] chạy eval | Bảng kết quả thành vô nghĩa. Muốn sửa thì chạy lại trọn bộ và ghi thành lượt 2 |
+| Sửa prompt sau khi người phụ trách eval đã chạy baseline | Bảng kết quả thành vô nghĩa. Muốn sửa thì chạy lại trọn bộ và ghi thành lượt 2 |
 | Làm đẹp UI thêm | 0 điểm |
 | Sửa số cho khớp quality bar | Rubric ghi thẳng: số bị chỉnh **không được tính** |

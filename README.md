@@ -5,6 +5,17 @@
 - Thời lượng: **1,5 ngày** (một ngày build + một buổi demo)
 - Nhóm: **4-5 người** · zone tối đa 5 nhóm · thi theo lớp
 
+## Nhóm HMQD - Discord AI Q&A Assistant
+
+| Thành viên | Vai trò CP4 | Artifact chính |
+|---|---|---|
+| `Hồ Quang Minh - 2A202601906` | Evidence, JTBD, impact | `spec.md` §1-§3 |
+| `Nguyễn Minh Quang - 2A202601730` | Thiết kế, chỗ khó, nguyên tắc HAX/PAIR | `spec.md` §4-§6 |
+| `Lệnh Quang Hưng - 2A202601546` | Repo glue, nhận artifact kiểm thử từ người phụ trách eval | `spec.md` §7-§9, README |
+| `Lê Minh Đạt - 2A202601088` | Prototype, validation, demo | `validation/`, `reflection/`, slide |
+
+Mục tiêu CP4: chốt `spec.md`, ghi rõ kế hoạch kiểm thử, nhận artifact eval từ người phụ trách riêng, và khóa quality bar trước khi sang CP5.
+
 ## Bắt đầu từ đâu?
 
 1. Đọc **`01-de-bai.md`** để chọn hướng và hiểu tiêu chí.
