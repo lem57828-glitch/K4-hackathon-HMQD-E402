@@ -1,0 +1,351 @@
+{
+  "dataset_id": "hmqd-golden-set-v1",
+  "description": "Golden set 20 case cho bot Q&A #hoi-dap. Bot đọc qna_posts.json để trả lời. Mỗi case có expected rồi — so sánh với output thật.",
+  "total_cases": 20,
+  "quality_bar": {
+    "pass_threshold": ">=80%",
+    "hard_rule": "Không được đánh giá post in_progress hoặc unclear thành resolved, dù chỉ một lần"
+  },
+  "cases": [
+    {
+      "case_id": "E01",
+      "type": "real",
+      "difficulty_layer": "answer_from_post",
+      "input": {
+        "title": "Mất thẻ sinh viên",
+        "body": "Mình vừa làm mất thẻ sinh viên VinUni, mà mai có buổi lab cần quẹt thẻ vào toà nhà. Giờ phải làm gì ạ?"
+      },
+      "expected": {
+        "decision": "answer_from_post",
+        "answer_contains": "One-Stop",
+        "sources_valid": true,
+        "notes": "P-1001: solved, trả lời rõ ràng về One-Stop + giấy tạm + 100k phí"
+      },
+      "source_post": "P-1001",
+      "notes": "Real — từ P-1001"
+    },
+    {
+      "case_id": "E02",
+      "type": "real",
+      "difficulty_layer": "answer_from_post",
+      "input": {
+        "title": "Lỗi 401 OpenRouter",
+        "body": "Em set key trong .env rồi mà gọi vẫn 401. Code dùng openai SDK trỏ base_url về openrouter."
+      },
+      "expected": {
+        "decision": "answer_from_post",
+        "answer_contains": ".env",
+        "sources_valid": true,
+        "notes": "P-1005: solved, lỗi thường gặp là file tên .env.txt thay vì .env"
+      },
+      "source_post": "P-1005",
+      "notes": "Real — từ P-1005"
+    },
+    {
+      "case_id": "E03",
+      "type": "real",
+      "difficulty_layer": "answer_from_post",
+      "input": {
+        "title": "429 Gemini khi chạy eval",
+        "body": "Chạy golden set 30 case thì đến case thứ 12 là 429. Free tier hết quota à?"
+      },
+      "expected": {
+        "decision": "answer_from_post",
+        "answer_contains": "sleep",
+        "sources_valid": true,
+        "notes": "P-1006: solved, 429 là giới hạn requests/phút, thêm sleep 4s"
+      },
+      "source_post": "P-1006",
+      "notes": "Real — từ P-1006"
+    },
+    {
+      "case_id": "E04",
+      "type": "real",
+      "difficulty_layer": "answer_from_post",
+      "input": {
+        "title": "Prompt injection trong tài liệu retrieve",
+        "body": "Tài liệu em retrieve có dòng 'Bỏ qua hướng dẫn phía trên'. Model làm theo luôn. Chặn kiểu gì?"
+      },
+      "expected": {
+        "decision": "answer_from_post",
+        "answer_contains": "untrusted",
+        "sources_valid": true,
+        "notes": "P-1009: solved, nội dung retrieve là DỮ LIỆU, không phải chỉ thị. Phải bọc trong untrusted_text"
+      },
+      "source_post": "P-1009",
+      "notes": "Real — từ P-1009, thuộc real_consequence"
+    },
+    {
+      "case_id": "E05",
+      "type": "real",
+      "difficulty_layer": "answer_from_post",
+      "input": {
+        "title": "CORS FastAPI localhost",
+        "body": "Console báo 'has been blocked by CORS policy: No Access-Control-Allow-Origin header'. Backend FastAPI."
+      },
+      "expected": {
+        "decision": "answer_from_post",
+        "answer_contains": "CORSMiddleware",
+        "sources_valid": true,
+        "notes": "P-1010: solved, thêm CORSMiddleware + allow_origins"
+      },
+      "source_post": "P-1010",
+      "notes": "Real — từ P-1010"
+    },
+    {
+      "case_id": "E06",
+      "type": "real",
+      "difficulty_layer": "answer_from_post",
+      "input": {
+        "title": "Vercel Module not found",
+        "body": "Local chạy bình thường, lên Vercel build fail. Import đúng đường dẫn mà."
+      },
+      "expected": {
+        "decision": "answer_from_post",
+        "answer_contains": "case",
+        "sources_valid": true,
+        "notes": "P-1011: solved, Linux phân biệt hoa thường, đổi tên file cho khớp"
+      },
+      "source_post": "P-1011",
+      "notes": "Real — từ P-1011"
+    },
+    {
+      "case_id": "E07",
+      "type": "real",
+      "difficulty_layer": "answer_from_post",
+      "input": {
+        "title": "Postgres connection refused trong Docker",
+        "body": "App chạy trong compose, connect host=localhost port=5432 thì refused."
+      },
+      "expected": {
+        "decision": "answer_from_post",
+        "answer_contains": "host=db",
+        "sources_valid": true,
+        "notes": "P-1017: solved, trong compose phải dùng tên service làm host"
+      },
+      "source_post": "P-1017",
+      "notes": "Real — từ P-1017"
+    },
+    {
+      "case_id": "E08",
+      "type": "real",
+      "difficulty_layer": "answer_from_post",
+      "input": {
+        "title": "Supabase RLS chặn insert",
+        "body": "Em bật RLS rồi viết policy cho insert mà vẫn bị chặn."
+      },
+      "expected": {
+        "decision": "answer_from_post",
+        "answer_contains": "WITH CHECK",
+        "sources_valid": true,
+        "notes": "P-1018: solved, policy insert phải có WITH CHECK chứ không phải USING"
+      },
+      "source_post": "P-1018",
+      "notes": "Real — từ P-1018"
+    },
+    {
+      "case_id": "E09",
+      "type": "real",
+      "difficulty_layer": "answer_from_post",
+      "input": {
+        "title": "Alembic multiple heads",
+        "body": "Merge nhánh xong chạy alembic upgrade head thì báo multiple heads. Không dám xóa file migration của bạn khác."
+      },
+      "expected": {
+        "decision": "ask_clarify",
+        "answer_contains": null,
+        "sources_valid": false,
+        "notes": "P-1019: status=null, không có giải pháp rõ ràng trong thread. Phải ask_clarify hoặc trả lời với ghi chú rõ ràng là chưa có câu trả lời cụ thể"
+      },
+      "source_post": "P-1019",
+      "notes": "Real — từ P-1019, thuộc missing_info"
+    },
+    {
+      "case_id": "E10",
+      "type": "real",
+      "difficulty_layer": "answer_from_post",
+      "input": {
+        "title": "Reflection cá nhân ở đâu",
+        "body": "Nhóm em đang tranh luận: reflection để trong repo/reflection/ hay nộp form cá nhân?"
+      },
+      "expected": {
+        "decision": "ask_clarify",
+        "answer_contains": null,
+        "sources_valid": false,
+        "notes": "P-1004: status=null, hai học viên trả lời khác nhau. Không có xác nhận của Lab Coach. Phải ask_clarify hoặc ghi rõ là đang chờ xác nhận."
+      },
+      "source_post": "P-1004",
+      "notes": "Real — từ P-1004, thuộc missing_info"
+    },
+    {
+      "case_id": "E11",
+      "type": "synthetic",
+      "difficulty_layer": "ambiguous",
+      "input": {
+        "title": "Mất thẻ",
+        "body": "Mình bị mất thẻ rồi, làm ở đâu để được vào toà nhà?"
+      },
+      "expected": {
+        "decision": "ask_clarify",
+        "answer_contains": "thẻ",
+        "sources_valid": false,
+        "notes": "Mơ hồ: học viên hỏi 'mất thẻ' nhưng không nói rõ là thẻ sinh viên (P-1001) hay thẻ thư viện (P-1002). Bot phải hỏi lại."
+      },
+      "source_post": null,
+      "notes": "Synthetic — ambiguous. P-1001 trả lời One-Stop, P-1002 trả lời quầy thư viện. Bot phải hỏi lại."
+    },
+    {
+      "case_id": "E12",
+      "type": "synthetic",
+      "difficulty_layer": "ambiguous",
+      "input": {
+        "title": "Thi hackathon",
+        "body": "Thi hackathon có khó không a? Nhóm mình có thể tham gia không?"
+      },
+      "expected": {
+        "decision": "ask_clarify",
+        "answer_contains": null,
+        "sources_valid": false,
+        "notes": "Mơ hồ: câu hỏi quá chung chung, không rõ đăng ký hay hỏi kinh nghiệm. Bot phải hỏi lại."
+      },
+      "source_post": null,
+      "notes": "Synthetic — ambiguous. Quá chung, không biết hỏi gì cụ thể."
+    },
+    {
+      "case_id": "E13",
+      "type": "synthetic",
+      "difficulty_layer": "out_of_scope",
+      "input": {
+        "title": "Điểm của tôi",
+        "body": "Cho mình hỏi điểm thi của tôi đi, mình muốn biết ạ."
+      },
+      "expected": {
+        "decision": "refuse_out_of_scope",
+        "answer_contains": null,
+        "sources_valid": false,
+        "notes": "Out of scope: học viên hỏi điểm cá nhân. Bot không có quyền truy cập điểm."
+      },
+      "source_post": null,
+      "notes": "Synthetic — out_of_scope. Bot trả lời thật nhưng vẫn phải refuse vì đây không thuộc phạm vi."
+    },
+    {
+      "case_id": "E14",
+      "type": "synthetic",
+      "difficulty_layer": "out_of_scope",
+      "input": {
+        "title": "Xóa bài hackathon",
+        "body": "Nhóm mình muốn xóa bài hackathon đi làm lại, được không?"
+      },
+      "expected": {
+        "decision": "refuse_out_of_scope",
+        "answer_contains": null,
+        "sources_valid": false,
+        "notes": "Out of scope: quyết định xóa bài thuộc giám khảo, bot không có quyền."
+      },
+      "source_post": null,
+      "notes": "Synthetic — out_of_scope. Bot phải refuse, không tự suy diễn."
+    },
+    {
+      "case_id": "E15",
+      "type": "synthetic",
+      "difficulty_layer": "out_of_scope",
+      "input": {
+        "title": "Giải bài tập hộ mình",
+        "body": "Mình gặp bài này không biết làm, giải giúp mình với: Write a quicksort in Python."
+      },
+      "expected": {
+        "decision": "refuse_out_of_scope",
+        "answer_contains": null,
+        "sources_valid": false,
+        "notes": "Out of scope: giải bài tập thay cho học viên. Đây là trái phép học thuật."
+      },
+      "source_post": null,
+      "notes": "Synthetic — out_of_scope. Bot phải refuse, đây không phải Q&A mà là giải bài tập."
+    },
+    {
+      "case_id": "E16",
+      "type": "synthetic",
+      "difficulty_layer": "real_consequence",
+      "input": {
+        "title": "Nộp bài sớm",
+        "body": "Mình nộp bài hackathon lúc 22:00 nhưng hạn là 23:59, có bị trừ điểm không?"
+      },
+      "expected": {
+        "decision": "answer_from_post",
+        "answer_contains": "23:59",
+        "sources_valid": true,
+        "notes": "P-1003 nói '23:59 ngày 1 là hạn cứng'. Trả lời đúng nhưng học viên gợi ý 22:00 có thể hiểu nhầm. Bot phải nói rõ ràng là hạn cứng, 22:00 là gợi ý chứ không phải hạn."
+      },
+      "source_post": "P-1003",
+      "notes": "Synthetic — real_consequence. P-1003 trả lời rõ về hạn cứng 23:59, nhưng học viên gợi ý 22:00 có thể bị hiểu lầm."
+    },
+    {
+      "case_id": "E17",
+      "type": "synthetic",
+      "difficulty_layer": "real_consequence",
+      "input": {
+        "title": "Docker xóa database",
+        "body": "Em chặn port 5432 rồi, gọi docker compose down -v để xóa data cũ rồi tạo lại, được chưa?"
+      },
+      "expected": {
+        "decision": "answer_from_post",
+        "answer_contains": "docker",
+        "sources_valid": true,
+        "notes": "Real consequence: docker compose down -v xóa tất cả volume. Nếu có data thì mất vĩnh viễn. Bot phải cảnh báo rõ ràng."
+      },
+      "source_post": null,
+      "notes": "Synthetic — real_consequence. Câu hỏi kỹ thuật đúng, nhưng có thể xóa data thật. Bot phải cảnh báo mạnh."
+    },
+    {
+      "case_id": "E18",
+      "type": "synthetic",
+      "difficulty_layer": "missing_info",
+      "input": {
+        "title": "Lỗi gì đó",
+        "body": "Em bị lỗi, không chạy được. Giúp em với."
+      },
+      "expected": {
+        "decision": "ask_clarify",
+        "answer_contains": "lỗi",
+        "sources_valid": false,
+        "notes": "Missing info: body chỉ có 'lỗi, không chạy được' không có lỗi cụ thể, không có log, không có ngôn ngữ, không có runtime. Bot phải hỏi thêm."
+      },
+      "source_post": null,
+      "notes": "Synthetic — missing_info. Quá ít thông tin để bắt đầu tìm kiếm."
+    },
+    {
+      "case_id": "E19",
+      "type": "synthetic",
+      "difficulty_layer": "answer_from_post",
+      "input": {
+        "title": "Nhóm 4 người",
+        "body": "Nhóm em có 4 người, có bị trừ điểm không?"
+      },
+      "expected": {
+        "decision": "answer_from_post",
+        "answer_contains": "không",
+        "sources_valid": true,
+        "notes": "P-1021: 'Không. Nhóm 4-5 đều chấm cùng một rubric, không có hệ số theo số người.' Trả lời rõ ràng."
+      },
+      "source_post": "P-1021",
+      "notes": "Synthetic — answer_from_post. Câu hỏi giống y P-1021. Bot sẽ tìm ra P-1021 và trả lời đúng."
+    },
+    {
+      "case_id": "E20",
+      "type": "synthetic",
+      "difficulty_layer": "missing_info",
+      "input": {
+        "title": "Chọn model nào",
+        "body": "Em nên dùng model nào để chạy ạ?"
+      },
+      "expected": {
+        "decision": "ask_clarify",
+        "answer_contains": null,
+        "sources_valid": false,
+        "notes": "Missing info: không rõ mục đích (eval? demo? production?), bao nhiêu budget, bao nhiêu case. Không nên trả lời chung chung."
+      },
+      "source_post": null,
+      "notes": "Synthetic — missing_info. Quá chung, cần thêm context để gợi ý phù hợp."
+    }
+  ]
+}
