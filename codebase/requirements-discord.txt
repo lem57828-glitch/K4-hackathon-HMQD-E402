@@ -1,0 +1,3 @@
+# CHỈ cần cho bản Discord (discord_bot.py + seed_forum.py).
+# Web UI và CLI vẫn chạy bằng stdlib thuần, không cần file này.
+discord.py>=2.4.0

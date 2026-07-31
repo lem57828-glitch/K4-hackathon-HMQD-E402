@@ -22,7 +22,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from assistant import run  # noqa: E402
 from provider import ChatProvider  # noqa: E402
-from tools import tag_vocabulary  # noqa: E402
+from tool_backend import BACKEND, tag_vocabulary  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent
 UI_PATH = ROOT / "ui" / "index.html"
@@ -62,6 +62,7 @@ class Handler(BaseHTTPRequestHandler):
                 "base_url": provider.base_url,
                 "api_key_env": provider.api_key_env,
                 "api_key_present": bool(os.getenv(provider.api_key_env)),
+                "backend": BACKEND,
                 "tags": tag_vocabulary(),
             })
         else:

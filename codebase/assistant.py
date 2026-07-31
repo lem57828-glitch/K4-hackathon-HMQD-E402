@@ -19,7 +19,7 @@ from typing import Any
 
 from env_loader import load_env
 from provider import ChatProvider, ProviderError
-from tools import TOOL_DECLARATIONS, TOOL_FUNCTIONS, tag_vocabulary
+from tool_backend import TOOL_DECLARATIONS, TOOL_FUNCTIONS, tag_vocabulary
 
 ROOT = Path(__file__).resolve().parent
 SYSTEM_PROMPT_PATH = ROOT / "prompts" / "system_prompt.md"

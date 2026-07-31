@@ -45,5 +45,14 @@ Hỏi những chủ đề này thì trợ lý **phải** đi đường `create_n
 
 ## Phân bố
 
-23 post · tag: AI/LLM 7 · Frontend 5 · Backend 6 · Database 4 · Logistics 6 (một số post nhiều tag).
-`status_label == "solved"`: 16 · `null`: 7. Trạng thái thật: resolved 16 · in_progress 3 · unclear 4.
+23 post · 70 tin nhắn · tag: AI/LLM 7 · Logistics 6 · Backend 5 · Frontend 4 · Database 4 (một số post nhiều tag).
+`status_label == "solved"`: **19** · `null`: **4**.
+
+Đếm lại bằng máy:
+
+```bash
+python -c "import json,collections;d=json.load(open('codebase/data/qna_posts.json',encoding='utf-8'));print(collections.Counter(str(p.get('status_label')) for p in d['posts']))"
+```
+
+Tỉ lệ nhãn `solved` cao (19/23) là **chủ ý**: trên Discord thật người ta gắn nhãn rộng tay,
+và đúng chỗ đó mới sinh ra bẫy — 3 trong 19 post gắn `solved` thực ra chưa xong.

@@ -254,12 +254,12 @@ flowchart TB
 
 | File | Vai trò | Dòng |
 |---|---|---|
-| [ui/index.html](codebase/ui/index.html) | Chat UI. Badge quyết định · nguồn kèm badge `resolution` · post nháp · tag · cảnh báo · panel Trace xổ ra xem từng tool call | 298 |
-| [app.py](codebase/app.py) | `ThreadingHTTPServer` stdlib. Chỉ phục vụ HTML + chuyển tiếp sang `assistant.run()` | 132 |
-| [assistant.py](codebase/assistant.py) | Vòng lặp agent tối đa 4 vòng · 1 lượt sửa JSON · `normalize_output` · `Trace` | 329 |
-| [provider.py](codebase/provider.py) | Gọi API thật bằng `urllib`. Retry 408/409/429/5xx, fail nhanh với 4xx khác | 149 |
-| [tools.py](codebase/tools.py) | `search_qna_posts` + `read_post_thread`. Bỏ dấu, bỏ stopword, chấm điểm | 222 |
-| [prompts/system_prompt.md](codebase/prompts/system_prompt.md) | Vai trò · quy trình bắt buộc · 3 định nghĩa resolution · 4 kết quả · 7 luật cứng · hợp đồng output | 68 |
+| [ui/index.html](codebase/ui/index.html) | Chat UI. Badge quyết định · nguồn kèm badge `resolution` · post nháp · tag · cảnh báo · panel Trace xổ ra xem từng tool call | ~330 |
+| [app.py](codebase/app.py) | `ThreadingHTTPServer` stdlib. Chỉ phục vụ HTML + chuyển tiếp sang `assistant.run()` | ~130 |
+| [assistant.py](codebase/assistant.py) | Vòng lặp agent tối đa 4 vòng · 1 lượt sửa JSON · `normalize_output` · `Trace` | ~330 |
+| [provider.py](codebase/provider.py) | Gọi API thật bằng `urllib`. Retry 408/409/429/5xx, fail nhanh với 4xx khác | ~150 |
+| [tools.py](codebase/tools.py) | `search_qna_posts` + `read_post_thread`. Bỏ dấu, bỏ stopword, chấm điểm | ~220 |
+| [prompts/system_prompt.md](codebase/prompts/system_prompt.md) | Vai trò · quy trình bắt buộc · 3 định nghĩa resolution · 4 kết quả · 7 luật cứng · hợp đồng output | 69 |
 | [data/qna_posts.json](codebase/data/qna_posts.json) | 23 post giả 100%, nhóm tự viết | — |
 
 ### Cách chấm điểm tìm kiếm — [tools.py:98-103](codebase/tools.py#L98-L103)
